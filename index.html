@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>mello Estimates</title>
+
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="print.css" media="print" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <form id="estimateForm">
+
+    <div id="errorContainer"></div>
+
+    <div id="clientAddress" class="active">
+
+      <h1>Client Information</h1>
+
+      <div class="itemContainer">
+        <label>Full name:</label>
+        <span class="errorIconContainer">
+          <input type="text" name="name" >
+        </span>
+      </div>
+
+      <div class="itemContainer">
+        <label>Street Address:</label>
+        <span class="errorIconContainer">
+          <input type="text" name="street">
+        </span>
+      </div>
+
+      <div class="itemContainer">
+        <label>Town:</label>
+        <span class="errorIconContainer">
+          <input type="text" name="town">
+        </span>
+      </div>
+
+      <div class="itemContainer">
+        <label>State:</label>
+        <span class="errorIconContainer">
+          <input type="text" name="state" >
+        </span>
+      </div>
+
+      <div class="itemContainer">
+        <label>Zip:</label>
+        <span class="errorIconContainer">
+          <input type="text" name="zip" >
+        </span>
+      </div>
+
+    </div>
+
+    <div id="tableContainer" class="hidden">
+
+      <div id="customerInfo">
+        <h3>Customer Info</h3>
+        <div id="customerName">Dan Mello</div>
+        <div id="customerAddress">611 summer st</div>
+        <div id="customerAddressPart2">Rockland, MA 02370</div>
+      </div>
+
+      <h1>Estimate Information</h1>
+
+      <div id="tableOverflow">
+        
+        <table>
+
+          <thead>
+            <th class='headingTable'>Description</th>
+            <th class='headingTable'>Price</th>
+          </thead>
+
+          <tbody id="mainData">
+            <tr>
+              <td><span class="errorIconContainer"><input type="text" name="description" value=""></span></td>
+              <td><span class="errorIconContainer moneyIconsHere"><input type="text" name="price" value=""></span></td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th><span class="errorIconContainer questionHere"><input type="text" name="timeFrame" value=""></span></th>
+              <th><span class="errorIconContainer"><input id="totalValue" type="text" name="total" readonly></span></th>
+            </tr>
+          </tfoot>
+          
+        </table>
+        
+      </div>
+
+    </div>
+
+    <div id="reviewEnd" class="hidden">
+
+      <h1 id="reviewHeadingDelete">Review your info</h1>
+
+      <div>
+
+        <div style="display: flex; justify-content: space-around; margin-top: 10px;">
+          
+          <div class="customerInfo">
+            <h3>From:</h3>
+            <div>CS Express Painting</div>
+            <div>42 Pacific st.</div>
+            <div>Rockland, MA 02370</div>
+          </div>
+
+          <div class="customerInfo">
+            <h3>To:</h3>
+            <div id="customerName">Dan Mello</div>
+            <div id="customerAddress">611 summer st</div>
+            <div id="customerAddressPart2">Rockland, MA 02370</div>
+          </div>
+
+        </div>
+        
+        
+      </div>
+
+      <h1 style="align-self: center; margin-top: 5px;">Proposal Contract</h1>
+
+      <table>
+
+        <thead id="finalHead">
+          <th>Description</th>
+          <th>Price</th>
+        </thead>
+
+        <tbody id="finalData">
+          
+        </tbody>
+
+        <tfoot id="finalFooter">
+          <td id="finalTime"></td>
+          <td id="finalValue"></td>
+        </tfoot>
+        
+      </table>
+
+        <p>We propose hereby to furnish to labor - complete in accordance with the above specifications for the sum of: <span id="finalValueNumber" style="font-weight: bold;"></span>.</p>
+        <p>With payments to be made as follows: <strong>30% </strong><span id="finalNumberPercent30" style="font-weight: bold;"></span> upon the start of the job,<strong> 35% </strong><span id="finalNumberPercent35" style="font-weight: bold;"></span> half way through the job, and the remaining balance upon completion.</p>
+
+        <p>Any alteration or deviation from the above specifications involving extra costs will be executed only upon order, and will become an extra charge over and above the estimate. All agreements contingent upon strikes, accidents, or delays beyond our control.</p>
+
+        <h3 style="align-self: center; text-decoration: underline; margin-top: 5px;">Acceptance of Proposal</h3>
+
+        <p>The above prices, specifications, and conditions are satisfactory and are hereby accepted. You are authorized to do the work as specified. Payment will be made as outlined above.</p>
+
+        <div style="margin-top: 15px;">
+          <label style="font-size: 20px;">Date of acceptance</label>
+          <div style="border-bottom: 1px solid #000; display: inline-block; width: 200px;"></div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <label style="font-size: 20px;">Authorized signature for (CS Express Painting): </label>
+          <div style="border-bottom: 1px solid #000; display: inline-block; width: 200px;"></div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <label style="font-size: 20px;">Named Printed: </label>
+          <div style="border-bottom: 1px solid #000; display: inline-block; width: 200px;"></div>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <label style="font-size: 20px;">Signature of customer: </label>
+          <div style="border-bottom: 1px solid #000; display: inline-block; width: 200px;"></div>
+        </div>
+        
+    </div>
+
+    <div id="buttonContainer">
+
+      <div id="previousButton" class="buttonboxes invisible">
+        <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+        <span>Previous</span>
+      </div>
+
+      <div id="deleteButton" class="buttonboxes hidden">
+        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        <span>Delete Column</span>
+      </div>
+
+      <div id="addButton" class="buttonboxes hidden">
+        <span>Add Column</span>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+      </div>
+
+      <div id="nextButton" class="buttonboxes">
+        <span>Next</span>
+        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+      </div>
+      
+    </div>
+
+  </form>
+
+<script src="scritps.js"></script>
+
+</body>
+</html>
