@@ -1,15 +1,26 @@
+@page {
+
+    /* this affects the margin in the printer settings */   
+}
+
 @media print {
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
 
   #reviewHeadingDelete, #buttonContainer {
     display: none;
   }
 
-/*  p {
-    page-break-inside: avoid;
-  }*/
-
   #estimateForm {
   	justify-content: flex-start;
+  }
+
+  .page-break div {
+    display: inline-block;
+    page-break-inside:avoid;
   }
 
   table { page-break-inside:auto }

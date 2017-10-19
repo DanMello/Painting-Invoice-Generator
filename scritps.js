@@ -196,7 +196,7 @@ function navigate(e) {
 
     })
 
-    tableRowRecursion()
+    createFinalRows()
 
   } else {
 
@@ -351,7 +351,7 @@ function deleteMe() {
 
 };
 
-function tableRowRecursion() {
+function createFinalRows() {
 
   let originalTbody = document.getElementById('mainData');
   let tbody = document.getElementById('finalData');
