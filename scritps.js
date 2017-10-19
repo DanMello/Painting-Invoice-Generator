@@ -186,8 +186,8 @@ function navigate(e) {
     nextButtonParent.lastElementChild.className = 'fa fa-print'
 
     let finalResults = form.querySelectorAll('input[name="total"], input[name="timeFrame"]');
-    let finalTimeFrame = form.querySelector('#finalTime')
-    let finalValue = form.querySelector('#finalValue')
+    let finalTimeFrame = form.querySelector('#finalTime');
+    let finalValue = form.querySelector('#finalValue');
 
     finalResults.forEach(input => {
 
@@ -253,7 +253,6 @@ function sum() {
       sum += parseFloat(filteredNum)
 
     };
-
 
   });
 
